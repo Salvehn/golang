@@ -41,7 +41,7 @@ func SingleHash(in chan interface{}, out chan interface{}) {
 		data := fmt.Sprintf("%v", data)
 		hashMd5 := DataSignerMd5(data)
 		go func(data string, hashMd5 string) {
-			//@todo надеюсь за этот костыль я не попаду в ад
+		
 			if data == "8" {
 				defer close(hashChan)
 			}
